@@ -2,21 +2,15 @@
 // 厳密なエラーチェックをしてくれる
 
 {
-  const player = {
-    name: 'watepu',
-    score: 80,
-  };
+  class Player{
+    constructor(name, score){
+      this.name = name;
+      this.score = score;
+    }
+  }
 
-  console.log(player);
-  console.log(player.name);
-  console.log(player['name']);
+  const watepu = new Player('watepu', 80);
+  const neko = new Player('neko', 60);
 
-  player.score = 100;
-  console.log(player);
-
-  player.age = 30;
-  console.log(player);
-
-  delete player.age;
-  console.log(player);
+  console.log(watepu.score); //80
 }
