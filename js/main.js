@@ -1,4 +1,7 @@
 'use strict';
 // 厳密なエラーチェックをしてくれる
 
-console.log('Hello world from main.js!');
+{
+  const scores = [80, 90, 40];
+  console.log(scores);
+}
