@@ -2,29 +2,17 @@
 // 厳密なエラーチェックをしてくれる
 
 {
-  class Player{
-    constructor(name, score){
-      this.name = name;
-      this.score = score;
-    }
-    showInfo(){
-      console.log(`name:${this.name} score:${this.score}`)
-    }
-  }
+  const a = [1, 5, 10];
 
-  class SoccerPlayer extends Player{
-    constructor(name, score, number){
-      super(name, score);
-      this.number = number;
-    }
-    kick(){
-      console.log('Goal!');
-    }
-  }
+  a.unshift(100);
+  console.log(a); //[100, 1, 5, 10]
 
-  const watepu = new SoccerPlayer('watepu', 80, 5);
+  a.push(200, 300);
+  console.log(a);  //[100, 1, 5 ,10, 200, 300]
 
-  watepu.kick(); //Goal!
-  console.log(watepu.number); //5
-  watepu.showInfo(); //name:watepu score:80
+  a.shift();
+  console.log(a);  //[1, 5 , 10, 200, 300]
+
+  a.pop();
+  console.log(a);  //[1, 5, 10, 200]
 }
