@@ -2,11 +2,10 @@
 // 厳密なエラーチェックをしてくれる
 
 {
-  const scores = [80, 90, 40];
-  console.log(scores[1]);
+  const player = {
+    name: 'watepu',
+    score: 80,
+  };
 
-  scores[2] = 50;
-  console.log(scores);
-
-  console.log(scores.length);
+  console.log(player);
 }
