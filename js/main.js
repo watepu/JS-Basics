@@ -4,15 +4,9 @@
 {
   const a = [1, 5, 10];
 
-  a.unshift(100);
-  console.log(a); //[100, 1, 5, 10]
+  a.splice(2, 0, 6, 7);  //indexが2の前、削除するのは0、追加するのは6、7
+  console.log(a);  //[1, 5, 6, 7, 10]
 
-  a.push(200, 300);
-  console.log(a);  //[100, 1, 5 ,10, 200, 300]
-
-  a.shift();
-  console.log(a);  //[1, 5 , 10, 200, 300]
-
-  a.pop();
-  console.log(a);  //[1, 5, 10, 200]
+  a.splice(1, 2);  //indexが1のところから2つ削除
+  console.log(a);  //[1, 7, 10]
 }
